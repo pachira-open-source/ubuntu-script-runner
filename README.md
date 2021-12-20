@@ -9,3 +9,4 @@
 - Git (Stock)
 - MySQL Client(Stock)
 - GitPython, request, pymysql
+- Docker CE CLI
