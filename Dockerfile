@@ -13,7 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 RUN python3 -m pip install --no-cache-dir GitPython==3.1.24 requests==2.26.0 pymysql==1.0.2
 RUN apt-get update --fix-missing && \
     apt-get install -y --no-install-recommends gnupg lsb-release && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
     apt-get update && \
     apt-get install docker-ce-cli && \
     apt-get autoremove && \
